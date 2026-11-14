@@ -1,5 +1,5 @@
 #include <iostream>
 int main() {
-    std::cout << "easy bridge" << std::endl;
+    std::cout << "burmalda" << std::endl;
     return 0;
 }
