@@ -4,13 +4,17 @@
     {
       "label": "configure",
       "type": "shell",
-      "command": "C:/msys64/ucrt64/bin/cmake.exe",
-      "args": ["-S", ".", "-B", "build", "-G", "MinGW Makefiles", "-DCMAKE_BUILD_TYPE=Debug"]
+      "command": "cmake",
+      "args": ["-S", ".", "-B", "build", "-DCMAKE_BUILD_TYPE=Debug"],
+      "windows": {
+        "args": ["-S", ".", "-B", "build", "-G", "MinGW Makefiles",
+                 "-DCMAKE_BUILD_TYPE=Debug"]
+      }
     },
     {
       "label": "build",
       "type": "shell",
-      "command": "C:/msys64/ucrt64/bin/cmake.exe --build build",
+      "command": "cmake --build build",
       "dependsOn": "configure",
       "group": { "kind": "build", "isDefault": true },
       "problemMatcher": ["$gcc"]
